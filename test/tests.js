@@ -1,5 +1,5 @@
+const app = require("../src/app.js");
 const assert = require("chai").assert;
-const app = require('./src/app.js');
 
 describe("getBalanceByCategoryInPeriod()", function() {
 // no transactions 

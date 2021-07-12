@@ -1,8 +1,11 @@
 {
   "name": "wp-txn",
   "version": "1.0.0",
-  "description": "transactions online ",
-  "main": "index.js",
+  "description": "test transactions ",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha ./test/tests.js"
   },
@@ -20,9 +23,6 @@
     "url": "https://github.com/Snehil03/wp-txn/issues"
   },
   "homepage": "https://github.com/Snehil03/wp-txn#readme",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
     "chai": "^4.3.4",
     "eslint": "^7.30.0",
