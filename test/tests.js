@@ -1,9 +1,9 @@
 const app = require("../src/app.js");
 const assert = require("chai").assert;
 
-describe("getBalanceByCategoryInPeriod()", function() {
+describe("getBalanceByCategoryInPeriod()", () => {
 // no transactions 
-  it("returns 0 if there are no transactions", function() {
+  it("return 0 if there are no transactions", () => {
     assert.equal(
       app.getBalanceByCategoryInPeriod(
         [],
@@ -16,7 +16,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
   });
  
  // positive return of balance for category 'eating_out'
-  it("returns calculated postive balance for 'eating_out' category  from 2018-03-01 to 2018-03-31", () => {
+  it("return calculated postive balance for 'eating_out' category from 2018-03-01 to 2018-03-31", () => {
     const transactions = [
       {
         id: 01,
@@ -64,7 +64,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
 
 
  // negative return of balance for category 'eating_out'
-  it("returns calculated negative balance for 'eating_out' category  from 2018-03-01 to 2018-03-31", () =>{
+  it("return calculated negative balance for 'eating_out' category  from 2018-03-01 to 2018-03-31", () =>{
     const transactions = [
       {
         id: 01,
@@ -110,7 +110,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
   });
  
   // boundry inclusive transactions of 'eating_out'
-  it("return balance for boundry cases for 'eating_out' category  with inclusivity 2018-03-01 to 2018-03-31", () => {
+  it("return balance for boundry cases with inclusivity 2018-03-01 to 2018-03-31 for category 'eating_out' ", () => {
     const transactions = [
       {
         id: 01,
@@ -156,7 +156,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
   });
   
   // balance outside transaction interval 
-  it("return transactions outside range of category 'eating_out' with outside case of 2018-04-01 to 2018-04-31", () => {
+  it("return transactions outside range with outside time interval of 2018-04-01 to 2018-04-31 for category 'eating_out'", () => {
     const transactions = [
       {
         id: 01,
