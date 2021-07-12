@@ -1,10 +1,11 @@
 const assert = require("chai").assert;
+const app = require('./src/app.js');
 
 describe("getBalanceByCategoryInPeriod()", function() {
 // no transactions 
   it("returns 0 if there are no transactions", function() {
     assert.equal(
-      getBalanceByCategoryInPeriod(
+      app.getBalanceByCategoryInPeriod(
         [],
         "groceries",
         new Date("2018-03-01"),
@@ -50,7 +51,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
         time: '2018-03-01T12:34:00Z'
       }];
     assert.equal(
-      getBalanceByCategoryInPeriod(
+      app.getBalanceByCategoryInPeriod(
         transactions,
         "eating_out",
         new Date("2018-03-01T00:00:00Z"),
@@ -98,7 +99,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
         time: '2018-03-01T12:34:00Z'
       }];
     assert.equal(
-      getBalanceByCategoryInPeriod(
+      app.getBalanceByCategoryInPeriod(
         transactions,
         "eating_out",
         new Date("2018-03-01T00:00:00Z"),
@@ -144,7 +145,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
         time: '2018-03-01T12:34:00Z'
       }];
     assert.equal(
-      getBalanceByCategoryInPeriod(
+      app.getBalanceByCategoryInPeriod(
         transactions,
         "eating_out",
         new Date("2018-03-01T00:00:00Z"),
@@ -190,7 +191,7 @@ describe("getBalanceByCategoryInPeriod()", function() {
         time: '2018-03-01T12:34:00Z'
       }];
     assert.equal(
-      getBalanceByCategoryInPeriod(
+      app.getBalanceByCategoryInPeriod(
         transactions,
         "eating_out",
         new Date("2018-04-01T00:00:00Z"),
